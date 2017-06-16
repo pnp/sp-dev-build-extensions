@@ -16,7 +16,7 @@ This custom gulp task can be used to upload your app solution package to the Sha
 
 Solution|Author(s)
 --------|---------
-update-manifest|Elio Struyf (MVP, U2U, @eliostruyf)
+update-manifest|Elio Struyf (MVP, [U2U](https://www.u2u.be), [@eliostruyf](https://twitter.com/@eliostruyf))
 
 ## Version history
 
