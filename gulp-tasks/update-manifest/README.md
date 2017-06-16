@@ -16,7 +16,7 @@ Custom gulp task that can be used to update the CDN URL in the `manifest.json` f
 
 Solution|Author(s)
 --------|---------
-update-manifest|Elio Struyf (MVP, [U2U](https://www.u2u.be), [@eliostruyf](https://twitter.com/@eliostruyf))
+update-manifest|Elio Struyf (MVP, [U2U](https://www.u2u.be), [@eliostruyf](https://twitter.com/eliostruyf))
 
 ## Version history
 
