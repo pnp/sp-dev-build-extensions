@@ -65,7 +65,7 @@ const environmentInfo = {
 In the command line run (if you configured default values, they do not have to be specified):
 
 ```sh
-gulp upload-to-sharepoint --ship --username "username" --password "password" --tenant "tenant-name-only" --cataogsite "sites/catalog"
+gulp upload-app-pkg --ship --username "username" --password "password" --tenant "tenant-name-only" --catalogsite "sites/catalog"
 ```
 
 This will give you the following output:
