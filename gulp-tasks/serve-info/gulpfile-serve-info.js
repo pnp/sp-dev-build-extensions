@@ -8,7 +8,7 @@ build.task('serve-info', {
       var serveTask = config.uniqueTasks.find((task) => {
         return task.name === 'serve';
       });
-      var url = `http${serveTask.taskConfig.https ? 's' : ''}://${serveTask.taskConfig.hostname}:${serveTask.taskConfig.port}/temp/manifest.js`;
+      var url = `http${serveTask.taskConfig.https ? 's' : ''}://${serveTask.taskConfig.hostname}:${serveTask.taskConfig.port}/temp/manifests.js`;
 
       for (var key in config.properties.manifests) {
         var manifest = config.properties.manifests[key];
