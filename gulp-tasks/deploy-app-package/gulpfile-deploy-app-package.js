@@ -10,7 +10,7 @@ const environmentInfo = {
   "catalogSite": ""
 };
 
-build.task('sppkg-deploy', {
+build.task('deploy-sppkg', {
   execute: (config) => {
     environmentInfo.username = config.args['username'] || environmentInfo.username;
     environmentInfo.password = config.args['password'] || environmentInfo.password;
