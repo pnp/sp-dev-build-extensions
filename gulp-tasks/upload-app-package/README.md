@@ -16,7 +16,7 @@ This custom gulp task can be used to upload your app solution package to the Sha
 
 Solution|Author(s)
 --------|---------
-update-manifest|Elio Struyf (MVP, [U2U](https://www.u2u.be), [@eliostruyf](https://twitter.com/eliostruyf))
+upload-app-package|Elio Struyf (MVP, [U2U](https://www.u2u.be), [@eliostruyf](https://twitter.com/eliostruyf))
 
 ## Version history
 
@@ -87,4 +87,4 @@ Build target: SHIP
 [11:17:28] Total duration: 15 s
 ```
 
-<img src="https://telemetry.sharepointpnp.com/sp-dev-build-extensions/gulp-tasks/upload-to-sharepoint" />
+<img src="https://telemetry.sharepointpnp.com/sp-dev-build-extensions/gulp-tasks/upload-app-package" />
