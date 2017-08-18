@@ -22,7 +22,7 @@ build.task('upload-to-sharepoint', {
 
     return new Promise((resolve, reject) => {
       const deployFolder = require('./config/copy-assets.json');
-      const folderLocation = `./${deployFolder.deployCdnPath}/**/*.js`;
+      const folderLocation = `./${deployFolder.deployCdnPath}/**/*.*`;
 
       return gulp.src(folderLocation)
         .pipe(spsync({
