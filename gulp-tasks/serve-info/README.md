@@ -22,6 +22,7 @@ serve-info|Waldek Mastykarz (MVP, Rencore, @waldekm)
 
 Version|Date|Comments
 -------|----|--------
+1.1.0|September 6, 2017|Updated to work with SPFx v1.2.0
 1.0.0|June 9, 2017|Initial release
 
 ## Disclaimer
@@ -43,8 +44,6 @@ const build = require('@microsoft/sp-build-web');
 require('./gulpfile-serve-info');
 
 build.initialize(gulp);
-
-gulp.tasks['serve-info'].dep.push('serve');
 ```
 
 ## Usage
