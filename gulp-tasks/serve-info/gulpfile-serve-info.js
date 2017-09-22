@@ -4,7 +4,7 @@ const build = require('@microsoft/sp-build-web');
 const common = require("@microsoft/sp-build-common");
 
 const originalBundleTask = build.rig.getBundleTask;
-build.rig.getBundleTask = function() {
+build.rig.getBundleTask = function () {
     const originalTask = originalBundleTask.apply(build.rig);
     return common.serial(originalTask, serveInfo);
 }
@@ -12,9 +12,9 @@ build.rig.getBundleTask = function() {
 const serveInfo = build.subTask('serve-info', (gulp, config, cb) => {
     var serveTask = config.uniqueTasks.find((task) => {
         return task.name === 'serve' /* SPFx < 1.2.0 */ ||
-            task.name === 'spfx-serve' /* SPFx >= 1.2.0 */;
+            task.name === 'spfx-serve' /* SPFx >= 1.2.0 */ ;
     });
-    var url = `http${serveTask.taskConfig.https ? 's' : ''}://${serveTask.taskConfig.hostname}:${serveTask.taskConfig.port}/temp/manifest.js`;
+    var url = `http${serveTask.taskConfig.https ? 's' : ''}://${serveTask.taskConfig.hostname}:${serveTask.taskConfig.port}/temp/manifests.js`;
     for (var key in config.properties.manifests) {
         var manifest = config.properties.manifests[key];
         if (manifest.componentType !== 'Extension') {
