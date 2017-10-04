@@ -51,13 +51,13 @@ build.initialize(gulp);
 In the command line run:
 
 ```sh
-gulp serve-info --nobrowser
+gulp serve --nobrowser
 ```
 
 This will run the standard `gulp serve` task followed by a listing of the debug query string parameters for the different extensions in the current project:
 
 ```text
-> ~/dev/spfx-extensions > gulp serve-info --nobrowser
+> ~/dev/spfx-extensions > gulp serve --nobrowser
 Build target: DEBUG
 [08:26:44] Using gulpfile ~/dev/spfx-extensions/gulpfile.js
 [08:26:44] Starting gulp
