@@ -5,7 +5,7 @@
 Custom gulp task showing query string parameters required for debugging of the different SharePoint Framework Extensions in the current project.
 
 ## Used SharePoint Framework Version 
-![drop](https://img.shields.io/badge/drop-1.1.0-green.svg)
+![drop](https://img.shields.io/badge/drop-1.3.0-green.svg)
 
 ## Applies to
 
