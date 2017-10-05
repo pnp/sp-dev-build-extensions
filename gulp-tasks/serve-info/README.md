@@ -5,7 +5,7 @@
 Custom gulp task showing query string parameters required for debugging of the different SharePoint Framework Extensions in the current project.
 
 ## Used SharePoint Framework Version 
-![drop](https://img.shields.io/badge/drop-1.1.1-green.svg)
+![drop](https://img.shields.io/badge/drop-1.1.0-green.svg)
 
 ## Applies to
 
@@ -22,6 +22,7 @@ serve-info|Waldek Mastykarz (MVP, Rencore, @waldekm)
 
 Version|Date|Comments
 -------|----|--------
+1.1.0|October 5, 2017|Verified working with SPFx v1.3.0
 1.1.0|September 6, 2017|Updated to work with SPFx v1.2.0
 1.0.0|June 9, 2017|Initial release
 
@@ -59,68 +60,51 @@ This will run the standard `gulp serve` task followed by a listing of the debug 
 ```text
 > ~/dev/spfx-extensions > gulp serve --nobrowser
 Build target: DEBUG
-[08:26:44] Using gulpfile ~/dev/spfx-extensions/gulpfile.js
-[08:26:44] Starting gulp
-[08:26:44] Starting 'serve'...
-[08:26:44] Starting subtask 'pre-copy'...
-[08:26:44] Finished subtask 'pre-copy' after 10 ms
-[08:26:44] Starting subtask 'copy-static-assets'...
-[08:26:44] Starting subtask 'sass'...
-[08:26:45] Finished subtask 'sass' after 1.25 s
-[08:26:45] Starting subtask 'tslint'...
-[08:26:45] Starting subtask 'typescript'...
-[08:26:45] [typescript] TypeScript version: 2.2.2
-[08:26:45] Finished subtask 'copy-static-assets' after 1.37 s
-[08:26:48] Finished subtask 'tslint' after 2.64 s
-[08:26:48] Finished subtask 'typescript' after 2.64 s
-[08:26:48] Starting subtask 'ts-npm-lint'...
-[08:26:48] Finished subtask 'ts-npm-lint' after 39 ms
-[08:26:48] Starting subtask 'api-extractor'...
-[08:26:48] Finished subtask 'api-extractor' after 771 μs
-[08:26:48] Starting subtask 'post-copy'...
-[08:26:48] Finished subtask 'post-copy' after 302 μs
-[08:26:48] Starting subtask 'collectLocalizedResources'...
-[08:26:48] Finished subtask 'collectLocalizedResources' after 8.46 ms
-[08:26:48] Starting subtask 'configure-webpack'...
-[08:26:48] Finished subtask 'configure-webpack' after 403 ms
-[08:26:48] Starting subtask 'webpack'...
-(node:24013) DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic, see https://github.com/webpack/loader-utils/issues/56
-parseQuery() will be replaced with getOptions() in the next major version of loader-utils.
-[08:26:49] Finished subtask 'webpack' after 1.23 s
-[08:26:49] Starting subtask 'configure-webpack-external-bundling'...
-[08:26:49] Finished subtask 'configure-webpack-external-bundling' after 804 μs
-[08:26:49] Starting subtask 'copy-assets'...
-[08:26:49] Finished subtask 'copy-assets' after 203 ms
-[08:26:49] Starting subtask 'write-manifests'...
-[08:26:50] Finished subtask 'write-manifests' after 406 ms
-[08:26:50] Starting subtask 'serve'...
-[08:26:50] Warning - [serve] The existing development certificate is missing the subjectAltName property and will not work with the latest versions of some browsers.  Untrust the certificate and generate a new one.
-Starting api server on port 5432.
-Registring api: /getwebparts
-Registring api: /*.*
-Registring api: /workbench
-[08:26:51] Finished subtask 'serve' after 656 ms
-[08:26:51] Finished 'serve' after 6.94 s
-[08:26:51] Starting 'serve-info'...
-ApplicationCustomizerApplicationCustomiz:
-?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifest.js&customActions={"e883a012-02e6-4475-a76c-fb79fb5cd15c":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"prop1":"val1"}}}
+[20:06:14] Using gulpfile C:\repos\udi\Udi-misc\O365\Provisioning\SPFx\Pzl.O365.ExtranetDisclaimer\gulpfile.js
+[20:06:14] Starting gulp
+[20:06:14] Starting 'serve'...
+[20:06:14] Starting subtask 'configure-sp-build-rig'...
+[20:06:14] Finished subtask 'configure-sp-build-rig' after 4.85 ms
+[20:06:14] Starting subtask 'spfx-serve'...
+[20:06:14] Finished subtask 'spfx-serve' after 197 ms
+[20:06:14] Starting subtask 'pre-copy'...
+[20:06:14] Finished subtask 'pre-copy' after 5.96 ms
+[20:06:14] Starting subtask 'copy-static-assets'...
+[20:06:14] Starting subtask 'sass'...
+[20:06:15] Server started https://localhost:4321
+[20:06:15] LiveReload started on port 35729
+[20:06:15] Finished subtask 'sass' after 706 ms
+[20:06:15] Starting subtask 'tslint'...
+[20:06:15] Starting subtask 'typescript'...
+[20:06:15] [typescript] TypeScript version: 2.4.2
+[20:06:15] Finished subtask 'copy-static-assets' after 1.25 s
+[20:06:16] Finished subtask 'tslint' after 849 ms
+[20:06:17] Finished subtask 'typescript' after 2 s
+[20:06:17] Starting subtask 'ts-npm-lint'...
+[20:06:17] Finished subtask 'ts-npm-lint' after 23 ms
+[20:06:17] Starting subtask 'api-extractor'...
+[20:06:17] Finished subtask 'api-extractor' after 967 μs
+[20:06:17] Starting subtask 'post-copy'...
+[20:06:17] Finished subtask 'post-copy' after 416 μs
+[20:06:17] Starting subtask 'collectLocalizedResources'...
+[20:06:17] Finished subtask 'collectLocalizedResources' after 4.86 ms
+[20:06:17] Starting subtask 'configure-webpack'...
+[20:06:18] Finished subtask 'configure-webpack' after 322 ms
+[20:06:18] Starting subtask 'webpack'...
+[20:06:18] Finished subtask 'webpack' after 216 ms
+[20:06:18] Starting subtask 'configure-webpack-external-bundling'...
+[20:06:18] Finished subtask 'configure-webpack-external-bundling' after 1.87 ms
+[20:06:18] Starting subtask 'copy-assets'...
+[20:06:18] Finished subtask 'copy-assets' after 26 ms
+[20:06:18] Starting subtask 'write-manifests'...
+[20:06:19] Finished subtask 'write-manifests' after 584 ms
+[20:06:19] Starting subtask 'serve-info'...
+ExtranetDisclaimerApplicationCustomizer:
+?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"b513cc49-8d38-4b41-9af8-6ad3ee4466b3":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"prop1":"val1"}}}
 
-FieldCustomizerFieldCustomizer:
-?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifest.js&fieldCustomizers={"FieldName":{"id":"f1cf9bc8-7e0c-4cc9-b18e-653a3c43a667","properties":{"prop1":"val1"}}}
-
-CommandSetCommandSet:
-?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifest.js&customActions={"d59b7aef-c044-4603-8366-d60810a593de":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
-
-[08:26:51] Finished 'serve-info' after 1.3 ms
-[08:26:51] Server started https://localhost:4321
-[08:26:51] LiveReload started on port 35729
-[08:26:51] ==================[ Finished ]==================
-Warning - [serve] The existing development certificate is missing the subjectAltName property and will not work with the latest versions of some browsers.  Untrust the certificate and generate a new one.
-[08:26:52] Project spfx-extensions version: 0.0.1
-[08:26:52] Build tools version: 2.5.3
-[08:26:52] Node version: v6.10.3
-[08:26:52] Total duration: 11 s
-[08:26:52] Task warnings: 1
+[20:06:19] Finished subtask 'serve-info' after 1.35 ms
+[20:06:19] Starting subtask 'reload'...
+[20:06:19] Finished subtask 'reload' after 1.35 ms
 ```
 
 <img src="https://telemetry.sharepointpnp.com/sp-dev-build-extensions/gulp-tasks/serve-info" />
