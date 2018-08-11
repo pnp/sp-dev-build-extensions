@@ -1,0 +1,364 @@
+{
+  "source": 2,
+  "revision": 17,
+  "description": null,
+  "createdBy": {
+      "displayName": "",
+      "url": "https://app.vssps.visualstudio.com/Ac310e65e-2e47-4665-b411-1b0912dbb016/_apis/Identities/536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+      "_links": {
+          "avatar": {
+              "href": "https://contoso.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.YzI3ZmZjYWItNTM2YS03N2NlLWJiOGEtZTdhZjg4ODFlODdi"
+          }
+      },
+      "id": "536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+      "uniqueName": "",
+      "imageUrl": "https://contoso.visualstudio.com/_api/_common/identityImage?id=536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+      "descriptor": "aad.YzI3ZmZjYWItNTM2YS03N2NlLWJiOGEtZTdhZjg4ODFlODdi"
+  },
+  "createdOn": "2017-07-22T22:11:11.113Z",
+  "modifiedBy": {
+      "displayName": "",
+      "url": "https://app.vssps.visualstudio.com/Ac310e65e-2e47-4665-b411-1b0912dbb016/_apis/Identities/536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+      "_links": {
+          "avatar": {
+              "href": "https://contoso.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.YzI3ZmZjYWItNTM2YS03N2NlLWJiOGEtZTdhZjg4ODFlODdi"
+          }
+      },
+      "id": "536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+      "uniqueName": "",
+      "imageUrl": "https://contoso.visualstudio.com/_api/_common/identityImage?id=536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+      "descriptor": "aad.YzI3ZmZjYWItNTM2YS03N2NlLWJiOGEtZTdhZjg4ODFlODdi"
+  },
+  "modifiedOn": "2018-08-09T22:18:05.423Z",
+  "isDeleted": false,
+  "variables": {},
+  "variableGroups": [],
+  "environments": [
+      {
+          "id": 2,
+          "name": "QA",
+          "rank": 1,
+          "owner": {
+              "displayName": "",
+              "url": "https://app.vssps.visualstudio.com/Ac310e65e-2e47-4665-b411-1b0912dbb016/_apis/Identities/536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+              "_links": {
+                  "avatar": {
+                      "href": "https://contoso.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.YzI3ZmZjYWItNTM2YS03N2NlLWJiOGEtZTdhZjg4ODFlODdi"
+                  }
+              },
+              "id": "536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+              "uniqueName": "",
+              "imageUrl": "https://contoso.visualstudio.com/_api/_common/identityImage?id=536d4ee9-0ae3-4d12-8a9d-843cc5edf21d",
+              "descriptor": "aad.YzI3ZmZjYWItNTM2YS03N2NlLWJiOGEtZTdhZjg4ODFlODdi"
+          },
+          "variables": {
+              "catalogsite": {
+                  "value": "sites/appcatalog"
+              },
+              "cdnlib": {
+                  "value": "SiteAssets/spfx"
+              },
+              "cdnsite": {
+                  "value": "sites/sessionspfxdevops"
+              },
+              "password": {
+                  "value": null,
+                  "isSecret": true
+              },
+              "tenant": {
+                  "value": "contoso"
+              },
+              "username": {
+                  "value": "vincent@contoso.onmicrosoft.com"
+              }
+          },
+          "variableGroups": [],
+          "preDeployApprovals": {
+              "approvals": [
+                  {
+                      "rank": 1,
+                      "isAutomated": true,
+                      "isNotificationOn": false,
+                      "id": 4
+                  }
+              ],
+              "approvalOptions": {
+                  "requiredApproverCount": null,
+                  "releaseCreatorCanBeApprover": false,
+                  "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                  "enforceIdentityRevalidation": false,
+                  "timeoutInMinutes": 0,
+                  "executionOrder": 1
+              }
+          },
+          "deployStep": {
+              "id": 5
+          },
+          "postDeployApprovals": {
+              "approvals": [
+                  {
+                      "rank": 1,
+                      "isAutomated": true,
+                      "isNotificationOn": false,
+                      "id": 6
+                  }
+              ],
+              "approvalOptions": {
+                  "requiredApproverCount": null,
+                  "releaseCreatorCanBeApprover": false,
+                  "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                  "enforceIdentityRevalidation": false,
+                  "timeoutInMinutes": 0,
+                  "executionOrder": 2
+              }
+          },
+          "deployPhases": [
+              {
+                  "deploymentInput": {
+                      "parallelExecution": {
+                          "parallelExecutionType": "none"
+                      },
+                      "skipArtifactsDownload": false,
+                      "artifactsDownloadInput": {
+                          "downloadInputs": []
+                      },
+                      "queueId": 2,
+                      "demands": [],
+                      "enableAccessToken": false,
+                      "timeoutInMinutes": 0,
+                      "jobCancelTimeoutInMinutes": 1,
+                      "condition": "succeeded()",
+                      "overrideInputs": {}
+                  },
+                  "rank": 1,
+                  "phaseType": 1,
+                  "name": "Run on agent",
+                  "workflowTasks": [
+                      {
+                          "environment": {},
+                          "taskId": "31c75bbb-bcdf-4706-8d7c-4da6a1959bc2",
+                          "version": "0.*",
+                          "name": "Use Node 10.x",
+                          "refName": "",
+                          "enabled": true,
+                          "alwaysRun": false,
+                          "continueOnError": false,
+                          "timeoutInMinutes": 0,
+                          "definitionType": "task",
+                          "overrideInputs": {},
+                          "condition": "succeeded()",
+                          "inputs": {
+                              "versionSpec": "10.x",
+                              "checkLatest": "false"
+                          }
+                      },
+                      {
+                          "environment": {},
+                          "taskId": "fe47e961-9fa8-4106-8639-368c022d43ad",
+                          "version": "1.*",
+                          "name": "npm install office 365 cli",
+                          "refName": "",
+                          "enabled": true,
+                          "alwaysRun": false,
+                          "continueOnError": false,
+                          "timeoutInMinutes": 0,
+                          "definitionType": "task",
+                          "overrideInputs": {},
+                          "condition": "succeeded()",
+                          "inputs": {
+                              "command": "custom",
+                              "workingDir": "",
+                              "verbose": "false",
+                              "customCommand": "install -g @pnp/office365-cli",
+                              "customRegistry": "useNpmrc",
+                              "customFeed": "",
+                              "customEndpoint": "",
+                              "publishRegistry": "useExternalRegistry",
+                              "publishFeed": "",
+                              "publishEndpoint": ""
+                          }
+                      },
+                      {
+                          "environment": {},
+                          "taskId": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+                          "version": "2.*",
+                          "name": "Connect to SP APP Catalog",
+                          "refName": "",
+                          "enabled": true,
+                          "alwaysRun": false,
+                          "continueOnError": false,
+                          "timeoutInMinutes": 0,
+                          "definitionType": "task",
+                          "overrideInputs": {},
+                          "condition": "succeeded()",
+                          "inputs": {
+                              "script": "o365 spo connect https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)\n",
+                              "workingDirectory": "",
+                              "failOnStderr": "false"
+                          }
+                      },
+                      {
+                          "environment": {},
+                          "taskId": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+                          "version": "2.*",
+                          "name": "Add the solution to SP APP Catalog",
+                          "refName": "",
+                          "enabled": true,
+                          "alwaysRun": false,
+                          "continueOnError": false,
+                          "timeoutInMinutes": 0,
+                          "definitionType": "task",
+                          "overrideInputs": {},
+                          "condition": "succeeded()",
+                          "inputs": {
+                              "script": "o365 spo app add -p $(System.DefaultWorkingDirectory)/SpFxDevOps/drop/SharePoint/solution/sp-fx-devops.sppkg --overwrite",
+                              "workingDirectory": "",
+                              "failOnStderr": "false"
+                          }
+                      },
+                      {
+                          "environment": {},
+                          "taskId": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+                          "version": "2.*",
+                          "name": "Deploy SP APP",
+                          "refName": "",
+                          "enabled": true,
+                          "alwaysRun": false,
+                          "continueOnError": false,
+                          "timeoutInMinutes": 0,
+                          "definitionType": "task",
+                          "overrideInputs": {},
+                          "condition": "succeeded()",
+                          "inputs": {
+                              "script": "o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)",
+                              "workingDirectory": "",
+                              "failOnStderr": "false"
+                          }
+                      }
+                  ]
+              }
+          ],
+          "environmentOptions": {
+              "emailNotificationType": "OnlyOnFailure",
+              "emailRecipients": "release.environment.owner;release.creator",
+              "skipArtifactsDownload": false,
+              "timeoutInMinutes": 0,
+              "enableAccessToken": false,
+              "publishDeploymentStatus": false,
+              "badgeEnabled": false,
+              "autoLinkWorkItems": false,
+              "pullRequestDeploymentEnabled": false
+          },
+          "demands": [],
+          "conditions": [
+              {
+                  "name": "ReleaseStarted",
+                  "conditionType": 1,
+                  "value": ""
+              },
+              {
+                  "name": "SpFxDevOps",
+                  "conditionType": 4,
+                  "value": "{\"sourceBranch\":\"develop\",\"tags\":[],\"useBuildDefinitionBranch\":false,\"createReleaseOnBuildTagging\":false}"
+              }
+          ],
+          "executionPolicy": {
+              "concurrencyCount": 0,
+              "queueDepthCount": 0
+          },
+          "schedules": [],
+          "currentRelease": {
+              "id": 68,
+              "url": "https://contoso.vsrm.visualstudio.com/b80138c3-28df-4282-bc1d-6fa534f75b70/_apis/Release/releases/68",
+              "_links": {}
+          },
+          "retentionPolicy": {
+              "daysToKeep": 30,
+              "releasesToKeep": 3,
+              "retainBuild": true
+          },
+          "processParameters": {},
+          "properties": {},
+          "preDeploymentGates": {
+              "id": 0,
+              "gatesOptions": {
+                  "isEnabled": false,
+                  "timeout": 1440,
+                  "samplingInterval": 15,
+                  "stabilizationTime": 15,
+                  "minimumSuccessDuration": 0
+              },
+              "gates": []
+          },
+          "postDeploymentGates": {
+              "id": 0,
+              "gatesOptions": null,
+              "gates": []
+          },
+          "environmentTriggers": [],
+          "badgeUrl": "https://contoso.vsrm.visualstudio.com/_apis/public/Release/badge/b80138c3-28df-4282-bc1d-6fa534f75b70/2/2"
+      }
+  ],
+  "artifacts": [
+      {
+          "sourceId": "b80138c3-28df-4282-bc1d-6fa534f75b70:13",
+          "type": "Build",
+          "alias": "SpFxDevOps",
+          "definitionReference": {
+              "artifactSourceDefinitionUrl": {
+                  "id": "https://contoso.visualstudio.com/_permalink/_build/index?collectionId=1129b30b-85e7-4110-a248-8c49be09dc06&projectId=b80138c3-28df-4282-bc1d-6fa534f75b70&definitionId=13",
+                  "name": ""
+              },
+              "defaultVersionBranch": {
+                  "id": "",
+                  "name": ""
+              },
+              "defaultVersionSpecific": {
+                  "id": "",
+                  "name": ""
+              },
+              "defaultVersionTags": {
+                  "id": "",
+                  "name": ""
+              },
+              "defaultVersionType": {
+                  "id": "latestType",
+                  "name": "Latest"
+              },
+              "definition": {
+                  "id": "13",
+                  "name": "SpFxDevOps"
+              },
+              "project": {
+                  "id": "b80138c3-28df-4282-bc1d-6fa534f75b70",
+                  "name": "Sessions"
+              }
+          },
+          "isPrimary": true,
+          "isRetained": false
+      }
+  ],
+  "triggers": [
+      {
+          "artifactAlias": "SpFxDevOps",
+          "triggerConditions": [],
+          "triggerType": 1
+      }
+  ],
+  "releaseNameFormat": "Release-$(rev:r)",
+  "tags": [],
+  "properties": {},
+  "id": 2,
+  "name": "SpFxDevOps",
+  "path": "\\",
+  "projectReference": null,
+  "url": "https://contoso.vsrm.visualstudio.com/b80138c3-28df-4282-bc1d-6fa534f75b70/_apis/Release/definitions/2",
+  "_links": {
+      "self": {
+          "href": "https://contoso.vsrm.visualstudio.com/b80138c3-28df-4282-bc1d-6fa534f75b70/_apis/Release/definitions/2"
+      },
+      "web": {
+          "href": "https://contoso.visualstudio.com/b80138c3-28df-4282-bc1d-6fa534f75b70/_release?definitionId=2"
+      }
+  }
+}
