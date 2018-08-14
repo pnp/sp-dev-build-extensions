@@ -1,0 +1,26 @@
+<div data-bind="attr: { class:devOpsClass }">
+  <div data-bind="attr: { class:containerClass }">
+    <div data-bind="attr: { class:rowClass }">
+      <div data-bind="attr: { class:columnClass }">
+        <span data-bind="attr: { class:titleClass }">Welcome to SharePoint!</span>
+        <p data-bind="attr: { class:subTitleClass }">Customize SharePoint experiences using Web Parts.</p>
+        <p data-bind="attr: { class:descriptionClass }, text:description"></p>
+        <a href="https://aka.ms/spfx" data-bind="attr: { class:buttonClass }">
+          <span data-bind="attr: { class:labelClass }">Learn more</span>
+        </a>
+        <h2>Hello included assets</h2>
+        <h2>Magic Calculator</h2>
+        <input type="number" data-bind="value: opA" /><br />
+        <input type="number" data-bind="value: opB" /><br />
+        <input type="button" data-bind="click: doCalculation" value="add" /><br />
+        <span>Result  :  </span><span data-bind="text: opResult"></span>
+        <!--<pre data-bind="text: ko.toJSON($data, null, 2)"></pre>-->
+        <h2>My Lists</h2>
+        <div data-bind="foreach: listCollection">
+          Title: <span data-bind="text: Title"></span><br />
+          Id: <span data-bind="text: Id"></span><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

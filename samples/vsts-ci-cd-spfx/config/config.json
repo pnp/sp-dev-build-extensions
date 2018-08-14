@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "dev-ops-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/devOps/DevOpsWebPart.js",
+          "manifest": "./src/webparts/devOps/DevOpsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DevOpsWebPartStrings": "lib/webparts/devOps/loc/{locale}.js"
+  }
+}
