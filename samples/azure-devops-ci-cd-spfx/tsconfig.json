@@ -4,6 +4,7 @@
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "outDir": "lib",
     "jsx": "react",
     "declaration": true,
     "sourceMap": true,
@@ -22,5 +23,12 @@
       "dom",
       "es2015.collection"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "lib"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
 }

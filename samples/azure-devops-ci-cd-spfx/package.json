@@ -6,10 +6,10 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "@microsoft/sp-core-library": "1.5.1",
-    "@microsoft/sp-lodash-subset": "1.5.1",
-    "@microsoft/sp-office-ui-fabric-core": "1.5.1",
-    "@microsoft/sp-webpart-base": "1.5.1",
+    "@microsoft/sp-core-library": "1.6.0",
+    "@microsoft/sp-lodash-subset": "1.6.0",
+    "@microsoft/sp-office-ui-fabric-core": "1.6.0",
+    "@microsoft/sp-webpart-base": "1.6.0",
     "@pnp/common": "^1.1.4",
     "@pnp/logging": "^1.1.4",
     "@pnp/odata": "^1.1.4",
@@ -20,16 +20,17 @@
     "knockout": "3.4.0"
   },
   "devDependencies": {
-    "@microsoft/sp-build-web": "1.5.1",
-    "@microsoft/sp-module-interfaces": "1.5.1",
-    "@microsoft/sp-webpart-workbench": "1.5.1",
+    "@microsoft/sp-build-web": "1.6.0",
+    "@microsoft/sp-module-interfaces": "1.6.0",
+    "@microsoft/sp-webpart-workbench": "1.6.0",
     "@types/chai": "3.4.34",
     "@types/chai-as-promised": "0.0.31",
     "@types/mocha": "2.2.38",
     "ajv": "~5.2.2",
     "chai-as-promised": "^6.0.0",
     "gulp": "~3.9.1",
-    "karma-junit-reporter": "^1.2.0"
+    "karma-junit-reporter": "^1.2.0",
+    "tslint-microsoft-contrib": "~5.0.0"
   },
   "scripts": {
     "build": "gulp bundle",
