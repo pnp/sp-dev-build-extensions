@@ -192,7 +192,7 @@
                           "overrideInputs": {},
                           "condition": "succeeded()",
                           "inputs": {
-                              "script": "o365 spo connect https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)\n",
+                              "script": "o365 spo login https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)\n",
                               "workingDirectory": "",
                               "failOnStderr": "false"
                           }
