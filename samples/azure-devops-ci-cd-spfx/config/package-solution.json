@@ -5,7 +5,8 @@
     "id": "5b5f92ac-4a48-483e-b4f6-8cd2878962a0",
     "version": "3.0.0.0",
     "includeClientSideAssets": true,
-    "skipFeatureDeployment": true
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
   },
   "paths": {
     "zippedPackage": "solution/sp-fx-devops.sppkg"
