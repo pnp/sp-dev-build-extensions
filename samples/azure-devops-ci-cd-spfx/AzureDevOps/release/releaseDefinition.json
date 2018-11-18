@@ -138,7 +138,7 @@
                           "environment": {},
                           "taskId": "31c75bbb-bcdf-4706-8d7c-4da6a1959bc2",
                           "version": "0.*",
-                          "name": "Use Node 10.x",
+                          "name": "Use Node 8.x",
                           "refName": "",
                           "enabled": true,
                           "alwaysRun": false,
@@ -148,7 +148,7 @@
                           "overrideInputs": {},
                           "condition": "succeeded()",
                           "inputs": {
-                              "versionSpec": "10.x",
+                              "versionSpec": "8.x",
                               "checkLatest": "false"
                           }
                       },
