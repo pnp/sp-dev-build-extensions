@@ -6,6 +6,10 @@ queue:
   - npm
   - node.js
 
+# variables
+variables:
+  workingDir: 'samples/azure-devops-ci-cd-spfx'
+
 steps:
 - task: NodeTool@0
   displayName: 'Use Node 8.x'
@@ -18,12 +22,16 @@ steps:
 - task: Npm@1
   displayName: 'npm install'
   inputs:
+    workingDir: '$(workingDir)'
+
     verbose: false
 
 
 - task: Gulp@0
   displayName: 'gulp test'
   inputs:
+    gulpFile: '$(workingDir)/gulpfile.js'
+
     targets: test
 
     publishJUnitResults: true
@@ -44,6 +52,8 @@ steps:
 - task: Gulp@0
   displayName: 'gulp bundle'
   inputs:
+    gulpFile: '$(workingDir)/gulpfile.js'
+
     targets: bundle
 
     arguments: '--ship'
@@ -53,6 +63,8 @@ steps:
 - task: Gulp@0
   displayName: 'gulp package-solution'
   inputs:
+    gulpFile: '$(workingDir)/gulpfile.js'
+
     targets: 'package-solution'
 
     arguments: '--ship'
