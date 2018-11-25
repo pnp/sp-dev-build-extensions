@@ -42,13 +42,13 @@ steps:
 
 #publish test results
 - task: PublishCodeCoverageResults@1
-  displayName: 'Publish Code Coverage Results $(Build.SourcesDirectory)/temp/coverage/cobertura/cobertura.xml'
+  displayName: 'Publish Code Coverage Results $(Build.SourcesDirectory)/$(workingDir)/temp/coverage/cobertura/cobertura.xml'
   inputs:
     codeCoverageTool: Cobertura
 
-    summaryFileLocation: '$(Build.SourcesDirectory)/temp/coverage/cobertura/cobertura.xml'
+    summaryFileLocation: '$(Build.SourcesDirectory)/$(workingDir)/temp/coverage/cobertura/cobertura.xml'
 
-    reportDirectory: '$(Build.SourcesDirectory)/temp/coverage/cobertura'
+    reportDirectory: '$(Build.SourcesDirectory)/$(workingDir)/temp/coverage/cobertura'
 
 #bundle code with gulp
 - task: Gulp@0
