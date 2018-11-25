@@ -1,0 +1,75 @@
+resources:
+- repo: self
+queue:
+  name: Hosted VS2017
+  demands: 
+  - npm
+  - node.js
+
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 8.x'
+  inputs:
+    versionSpec: 8.x
+
+    checkLatest: true
+
+
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    verbose: false
+
+
+- task: Gulp@0
+  displayName: 'gulp test'
+  inputs:
+    targets: test
+
+    publishJUnitResults: true
+
+    testResultsFiles: '**/test-*.xml'
+
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish Code Coverage Results $(Build.SourcesDirectory)/temp/coverage/cobertura/cobertura.xml'
+  inputs:
+    codeCoverageTool: Cobertura
+
+    summaryFileLocation: '$(Build.SourcesDirectory)/temp/coverage/cobertura/cobertura.xml'
+
+    reportDirectory: '$(Build.SourcesDirectory)/temp/coverage/cobertura'
+
+
+- task: Gulp@0
+  displayName: 'gulp bundle'
+  inputs:
+    targets: bundle
+
+    arguments: '--ship'
+
+  continueOnError: true
+
+- task: Gulp@0
+  displayName: 'gulp package-solution'
+  inputs:
+    targets: 'package-solution'
+
+    arguments: '--ship'
+
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)/drop'
+  inputs:
+    Contents: '**\*.sppkg'
+
+    TargetFolder: '$(build.artifactstagingdirectory)/drop'
+
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact:  drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)/drop'
+
+
+
