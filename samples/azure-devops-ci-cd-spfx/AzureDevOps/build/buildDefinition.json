@@ -88,7 +88,7 @@
             "enabled": true,
             "continueOnError": false,
             "alwaysRun": false,
-            "displayName": "Use Node 10.x",
+            "displayName": "Use Node 8.x",
             "timeoutInMinutes": 0,
             "condition": "succeeded()",
             "task": {
@@ -97,7 +97,7 @@
               "definitionType": "task"
             },
             "inputs": {
-              "versionSpec": "10.x",
+              "versionSpec": "8.x",
               "checkLatest": "true"
             }
           },
