@@ -5,7 +5,7 @@
     "isDomainIsolated": false,
     "packageManager": "npm",
     "libraryName": "sp-fx-devops",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "libraryId": "5b5f92ac-4a48-483e-b4f6-8cd2878962a0",
     "environment": "spo"
   }
