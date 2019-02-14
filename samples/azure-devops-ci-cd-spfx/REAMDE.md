@@ -32,6 +32,7 @@ Version|Date|Comments
 1.0|August 15, 2018|Initial release
 1.1|September 10, 2018|Renaming to Azure DevOps And Upgrade to SPFX1.6
 1.2|December 30, 2018|Upgrading to SPFX 1.7.1
+1.3|February 14, 2019|Removed dependency to lodash
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
