@@ -1,6 +1,5 @@
 "use strict";
 var existingKarmaConfig = require('@microsoft/sp-build-web/lib/karma/karma.config');
-var _ = require('lodash');
 var junitReporter = require('karma-junit-reporter');
 
 module.exports = function (config) {
