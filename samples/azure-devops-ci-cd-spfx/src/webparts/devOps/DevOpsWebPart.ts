@@ -1,10 +1,7 @@
 import * as ko from "knockout";
 import { Version, Environment, EnvironmentType } from "@microsoft/sp-core-library";
-import {
-  BaseClientSideWebPart,
-  IPropertyPaneConfiguration,
-  PropertyPaneTextField
-} from "@microsoft/sp-webpart-base";
+import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { IPropertyPaneConfiguration, PropertyPaneTextField } from "@microsoft/sp-property-pane";
 import { sp } from "@pnp/sp";
 import * as strings from "DevOpsWebPartStrings";
 import DevOpsWebPartViewModel, { IDevOpsBindingContext } from "./DevOpsViewModel";
