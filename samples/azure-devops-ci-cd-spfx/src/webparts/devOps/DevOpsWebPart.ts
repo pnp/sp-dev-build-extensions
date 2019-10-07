@@ -67,7 +67,7 @@ export default class DevOpsWebPart extends BaseClientSideWebPart<IDevOpsWebPartP
     ko.components.register(
       tagName,
       {
-        viewModel: DevOpsWebPartViewModel,
+        viewModel: DevOpsWebPartViewModel as any,
         template: require("./DevOps.template.html"),
         synchronous: false
       }
