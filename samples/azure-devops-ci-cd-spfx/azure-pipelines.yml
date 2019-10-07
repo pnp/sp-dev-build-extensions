@@ -1,7 +1,7 @@
 resources:
 - repo: self
 pool:
-  vmImage: 'vs2017-win2016'
+  vmImage: 'ubuntu-latest'
   demands:
   - npm
   - node.js
@@ -17,6 +17,12 @@ steps:
   inputs:
     versionSpec: 10.x
     checkLatest: true
+#caching dependencies when possible
+- task: CacheBeta@0
+  inputs:
+    key: $(Agent.OS) | $(Build.SourcesDirectory)/package-lock.json
+    path: $(Build.SourcesDirectory)/node_modules
+    cacheHitVar: CACHE_RESTORED
 
 #install nodejs modules with npm
 - task: Npm@1
@@ -24,6 +30,7 @@ steps:
   inputs:
     workingDir: '$(workingDir)'
     verbose: false
+  condition: ne(variables.CACHE_RESTORED, 'true')
 
 #start unit tests
 - task: Npm@1
@@ -37,16 +44,15 @@ steps:
 # Publish Test Results to Azure Pipelines/TFS
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: 'temp/test/junit/junit.xml'
+    testResultsFiles: '**/junit.xml'
     searchFolder: '$(Build.SourcesDirectory)'
 
 # publish coverage test results
 - task: PublishCodeCoverageResults@1
-  displayName: 'Publish Code Coverage Results $(Build.SourcesDirectory)/temp/test/cobertura-coverage.xml'
+  displayName: 'Publish Code Coverage Results $(Build.SourcesDirectory)/**/*-coverage.xml'
   inputs:
     codeCoverageTool: Cobertura
-    summaryFileLocation: '$(Build.SourcesDirectory)/temp/test/cobertura-coverage.xml'
-    reportDirectory: '$(Build.SourcesDirectory)/temp/test/'
+    summaryFileLocation: '$(Build.SourcesDirectory)/**/*-coverage.xml'
 
 #bundle code with gulp
 - task: Gulp@0
