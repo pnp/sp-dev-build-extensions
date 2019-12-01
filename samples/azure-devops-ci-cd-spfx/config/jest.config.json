@@ -1,6 +1,9 @@
 {
   "preset": "@voitanos/jest-preset-spfx-react16",
   "rootDir": "../src",
+  "setupFiles": [
+    "<rootDir>/../config/jest.enzyme.js"
+  ],
   "collectCoverageFrom": [
     "<rootDir>/**/*.{ts,tsx}",
     "!<rootDir>/**/*.scss.*",
