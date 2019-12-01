@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component renders properly snapshot should match 1`] = `
+<div
+  className="devopsReact"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="column"
+      >
+        <span
+          className="title"
+        >
+          Current complex value
+        </span>
+        <p
+          className="subTitle"
+        />
+        <CustomizedDefaultButton
+          onClick={[Function]}
+          text="Add one to value"
+        />
+        <button
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+  </div>
+  <StyledPersonaBase
+    hidePersonaDetails={false}
+    imageUrl="data:image/jpg;base64,"
+    presence={5}
+    secondaryText="General Manager"
+    size={15}
+    tertiaryText="Jane.Smith@contoso.com"
+    text="Jane Smith"
+  />
+</div>
+`;

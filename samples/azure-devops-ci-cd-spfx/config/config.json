@@ -5,14 +5,14 @@
     "dev-ops-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/devOps/DevOpsWebPart.js",
-          "manifest": "./src/webparts/devOps/DevOpsWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/devopsReact/DevopsReactWebPart.js",
+          "manifest": "./src/webparts/devopsReact/DevopsReactWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "DevOpsWebPartStrings": "lib/webparts/devOps/loc/{locale}.js"
+    "DevopsReactWebPartStrings": "lib/webparts/devopsReact/loc/{locale}.js"
   }
 }
