@@ -1,85 +1,25 @@
+name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 resources:
 - repo: self
-pool:
-  vmImage: 'ubuntu-latest'
-  demands:
-  - npm
-  - node.js
 
-# variables
-variables:
-  workingDir: 'samples/azure-devops-ci-cd-spfx'
+trigger:
+  branches:
+    include:
+    - master
+    - develop
 
-steps:
-#install node 10.x
-- task: NodeTool@0
-  displayName: 'Use Node 10.x'
-  inputs:
-    versionSpec: 10.x
-    checkLatest: true
-#caching dependencies when possible
-- task: CacheBeta@0
-  inputs:
-    key: $(Agent.OS) | $(Build.SourcesDirectory)/package-lock.json
-    path: $(Build.SourcesDirectory)/node_modules
-    cacheHitVar: CACHE_RESTORED
-
-#install nodejs modules with npm
-- task: Npm@1
-  displayName: 'npm install'
-  inputs:
-    workingDir: '$(workingDir)'
-    verbose: false
-  condition: ne(variables.CACHE_RESTORED, 'true')
-
-#start unit tests
-- task: Npm@1
-  displayName: 'npm test'
-  inputs:
-    command: custom
-    customCommand: 'test'
-    workingDir: '$(Build.SourcesDirectory)'
-    verbose: false
-
-# Publish Test Results to Azure Pipelines/TFS
-- task: PublishTestResults@2
-  inputs:
-    testResultsFiles: '**/junit.xml'
-    searchFolder: '$(Build.SourcesDirectory)'
-
-# publish coverage test results
-- task: PublishCodeCoverageResults@1
-  displayName: 'Publish Code Coverage Results $(Build.SourcesDirectory)/**/*-coverage.xml'
-  inputs:
-    codeCoverageTool: Cobertura
-    summaryFileLocation: '$(Build.SourcesDirectory)/**/*-coverage.xml'
-
-#bundle code with gulp
-- task: Gulp@0
-  displayName: 'gulp bundle'
-  inputs:
-    gulpFile: '$(workingDir)/gulpfile.js'
-    targets: bundle
-    arguments: '--ship'
-  continueOnError: true
-
-#package solution with gulp
-- task: Gulp@0
-  displayName: 'gulp package-solution'
-  inputs:
-    gulpFile: '$(workingDir)/gulpfile.js'
-    targets: 'package-solution'
-    arguments: '--ship'
-
-#copy files to artifact repository
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(build.artifactstagingdirectory)/drop'
-  inputs:
-    Contents: '**\*.sppkg'
-    TargetFolder: '$(build.artifactstagingdirectory)/drop'
-
-#publish artifacts
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact:  drop'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)/drop'
+stages:
+- stage: build
+  displayName: build
+  jobs:
+    - template: ./templates/azure-pipelines-build-template.yml
+      parameters:
+        name: 'buildsolution'
+- stage: 'deployqa'
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'))
+  jobs:
+    - template: ./templates/azure-pipelines-deploy-template.yml
+      parameters:
+        job_name: deploy_solution
+        target_environment: 'qa'
+        variable_group_name: qa_configuration

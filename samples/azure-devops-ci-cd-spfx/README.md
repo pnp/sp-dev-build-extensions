@@ -35,6 +35,7 @@ Version|Date|Comments
 1.3|February 14, 2019|Removed dependency to lodash
 1.4|March 28, 2019|Upgrading to SPFx 1.8.0 and transitioning to Jest
 1.5|October 7, 2019|Upgrading to SPFx 1.9.1 and other configuration updates
+1.6|December 1, 2019|Migrated to React and modern pipelines
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
@@ -46,6 +47,11 @@ Version|Date|Comments
 - Clone this repository
 - Import build definitions into your environment
 - Push the source base on a repository
+- Enable the Multi-stage pipelines preview feature in Azure DevOps
+- Register a variable group (under library under pipelines) named `qa_configuration` and provide the 3 following variables
+  - o365_user_login: email of the tenant administrator
+  - o365_user_password: password of the tenant administrator
+  - o365_app_catalog_site_url: url of the app catalog in the tenant
 
 
 ## Features

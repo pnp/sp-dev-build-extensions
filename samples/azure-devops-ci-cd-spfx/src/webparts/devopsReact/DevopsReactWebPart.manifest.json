@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "209f096f-f1ae-495c-9df0-d93477429da0",
-  "alias": "DevOpsWebPart",
+  "id": "d85cc403-542e-4bf4-8a28-22f6ab89f9f9",
+  "alias": "DevopsReactWebPart",
   "componentType": "WebPart",
 
   // The "*" signifies that the version should be taken from the package.json
@@ -17,11 +17,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
     "group": { "default": "Other" },
-    "title": { "default": "DevOps" },
-    "description": { "default": "devOpsWebPart description" },
+    "title": { "default": "devops-react" },
+    "description": { "default": "devops-react description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "DevOps"
+      "description": "devops-react"
     }
   }]
 }
